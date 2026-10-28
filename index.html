@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetLover - Pet Shop & Clínica Veterinária</title>
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CABEÇALHO / NAVBAR -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-paw"></i>
+        <span>Pet<strong>Lover</strong></span>
+      </a>
+
+      <!-- Botão Hambúrguer Mobile -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- 5 Abas / Links de Navegação -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#produtos" class="nav-link">Produtos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <div class="nav-cart">
+          <button class="cart-btn" id="cart-btn" title="Ver Carrinho">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABA 1: CARROSSEL / HERO -->
+    <section class="carousel-section" id="home">
+      <div class="carousel" id="carousel">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: linear-gradient(rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.65)), url('https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=1600&auto=format&fit=crop');">
+          <div class="slide-content">
+            <span class="slide-tag">Amor e Dedicação</span>
+            <h2>O melhor cuidado para o seu melhor amigo</h2>
+            <p>Banho relaxante, tosa higiênica e carinho que o seu pet merece todos os dias.</p>
+            <div class="slide-buttons">
+              <a href="#servicos" class="btn btn-primary">Conhecer Serviços</a>
+              <a href="#contato" class="btn btn-secondary">Agendar Horário</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: linear-gradient(rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.65)), url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1600&auto=format&fit=crop');">
+          <div class="slide-content">
+            <span class="slide-tag">Saúde & Bem-estar</span>
+            <h2>Atendimento Veterinário Especializado</h2>
+            <p>Consultas preventivas, vacinação e exames com uma equipe altamente qualificada.</p>
+            <div class="slide-buttons">
+              <a href="#servicos" class="btn btn-primary">Nossa Clínica</a>
+              <a href="#contato" class="btn btn-secondary">Falar com Vet</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: linear-gradient(rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.65)), url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1600&auto=format&fit=crop');">
+          <div class="slide-content">
+            <span class="slide-tag">Pet Boutique & Ração</span>
+            <h2>Nutrição Premium e Brinquedos Incríveis</h2>
+            <p>As melhores marcas de ração, petiscos e acessórios para cães e gatos felizes.</p>
+            <div class="slide-buttons">
+              <a href="#produtos" class="btn btn-primary">Ver Loja</a>
+              <a href="#contato" class="btn btn-secondary">Delivery Rápido</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles do Carrossel -->
+        <button class="carousel-control prev" id="prev-btn" aria-label="Slide anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carousel-control next" id="next-btn" aria-label="Próximo slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Indicadores (Dots) -->
+        <div class="carousel-indicators" id="carousel-indicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 2: SOBRE NÓS -->
+    <section class="section about-section" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800&auto=format&fit=crop" alt="Cuidador com cão" class="about-img" />
+            <div class="experience-badge">
+              <span class="years">+8</span>
+              <span class="text">Anos cuidando de famílias</span>
+            </div>
+          </div>
+          <div class="about-text">
+            <span class="section-subtitle">QUEM SOMOS</span>
+            <h2 class="section-title">Mais que um Pet Shop, uma extensão da sua casa</h2>
+            <p>Fundado por veterinários apaixonados pela vida animal, o <strong>PetLover</strong> nasceu com a missão de transformar a experiência de cuidado veterinário, estética e alimentação animal.</p>
+            
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div>
+                  <h4>Cuidado Humanizado</h4>
+                  <p>Manejo livre de estresse com profissionais treinados em comportamento animal.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                <div>
+                  <h4>Ambientes Seguros</h4>
+                  <p>Salas higienizadas com produtos seguros e monitoramento contínuo.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contato" class="btn btn-primary">Venha nos Visitar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 3: SERVIÇOS (CARDS) -->
+    <section class="section services-section" id="servicos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">O QUE OFERECEMOS</span>
+          <h2 class="section-title">Serviços pensados para a saúde do pet</h2>
+          <p>Toda a assistência estética e médica com profissionais experientes e dedicados.</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card Serviço 1 -->
+          <div class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-shower"></i></div>
+            <h3>Banho & Tosa SPA</h3>
+            <p>Água em temperatura ideal, toalhas esterilizadas, secagem sem barulho e hidratação de pelos.</p>
+            <ul class="card-benefits">
+              <li><i class="fa-solid fa-check"></i> Corte de unhas e limpeza auricular</li>
+              <li><i class="fa-solid fa-check"></i> Produtos hipoalergênicos</li>
+            </ul>
+            <a href="#contato" class="btn-card" onclick="selectService('Banho & Tosa')">Agendar Banho</a>
+          </div>
+
+          <!-- Card Serviço 2 -->
+          <div class="card service-card highlighted">
+            <div class="badge-card">Mais Procurado</div>
+            <div class="card-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <h3>Clínica Veterinária</h3>
+            <p>Consultas clínicas gerais, controle de parasitas e check-ups preventivos anuais.</p>
+            <ul class="card-benefits">
+              <li><i class="fa-solid fa-check"></i> Exames laboratoriais rápidos</li>
+              <li><i class="fa-solid fa-check"></i> Atendimento com hora marcada</li>
+            </ul>
+            <a href="#contato" class="btn-card" onclick="selectService('Consulta Veterinária')">Agendar Consulta</a>
+          </div>
+
+          <!-- Card Serviço 3 -->
+          <div class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-syringe"></i></div>
+            <h3>Vacinação & Imunização</h3>
+            <p>Protocolos vacinais completos (V8, V10, Antirrábica, Giárdia) de procedência garantida.</p>
+            <ul class="card-benefits">
+              <li><i class="fa-solid fa-check"></i> Carteira de vacinação digital</li>
+              <li><i class="fa-solid fa-check"></i> Lembretes periódicos de reforço</li>
+            </ul>
+            <a href="#contato" class="btn-card" onclick="selectService('Vacinação')">Atualizar Vacinas</a>
+          </div>
+
+          <!-- Card Serviço 4 -->
+          <div class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+            <h3>Táxi Pet Leva & Traz</h3>
+            <p>Transporte com caixas higienizadas, cinto de segurança especial e ar condicionado.</p>
+            <ul class="card-benefits">
+              <li><i class="fa-solid fa-check"></i> Agilidade e pontualidade</li>
+              <li><i class="fa-solid fa-check"></i> Rastreamento de rota</li>
+            </ul>
+            <a href="#contato" class="btn-card" onclick="selectService('Táxi Pet')">Solicitar Táxi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 4: PRODUTOS (CARDS COM CARRINHO) -->
+    <section class="section products-section" id="produtos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">NOSSA LOJA</span>
+          <h2 class="section-title">Produtos Selecionados</h2>
+          <p>Nutrição balanceada, conforto térmico e brinquedos interativos de alta durabilidade.</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Produto 1 -->
+          <div class="card product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=500&auto=format&fit=crop" alt="Ração Premium Cães" />
+              <span class="product-tag">Nutrição</span>
+            </div>
+            <div class="product-details">
+              <h4>Ração Super Premium Cães 15kg</h4>
+              <p>Proteína nobre, ômega 3 e zero corantes artificiais.</p>
+              <div class="product-price-row">
+                <span class="price">R$ 219,90</span>
+                <button class="add-to-cart-btn" onclick="addToCart('Ração Super Premium 15kg', 219.90)">
+                  <i class="fa-solid fa-plus"></i> Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 2 -->
+          <div class="card product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?q=80&w=500&auto=format&fit=crop" alt="Cama Pet Confort" />
+              <span class="product-tag">Conforto</span>
+            </div>
+            <div class="product-details">
+              <h4>Cama Ortopédica Nuvem Luxo</h4>
+              <p>Espuma com memória viscoelástica e capa 100% lavável.</p>
+              <div class="product-price-row">
+                <span class="price">R$ 149,00</span>
+                <button class="add-to-cart-btn" onclick="addToCart('Cama Ortopédica Nuvem', 149.00)">
+                  <i class="fa-solid fa-plus"></i> Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="card product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=500&auto=format&fit=crop" alt="Brinquedo Mordedor" />
+              <span class="product-tag">Diversão</span>
+            </div>
+            <div class="product-details">
+              <h4>Mordedor Interativo Anti-Stress</h4>
+              <p>Borracha natural atóxica que auxilia na limpeza dental.</p>
+              <div class="product-price-row">
+                <span class="price">R$ 39,90</span>
+                <button class="add-to-cart-btn" onclick="addToCart('Mordedor Anti-Stress', 39.90)">
+                  <i class="fa-solid fa-plus"></i> Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 4 -->
+          <div class="card product-card">
+            <div class="product-thumb">
+              <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?q=80&w=500&auto=format&fit=crop" alt="Petiscos Naturais" />
+              <span class="product-tag">Snacks</span>
+            </div>
+            <div class="product-details">
+              <h4>Snack Natural de Frango e Cenoura</h4>
+              <p>100% desidratado e livre de conservantes químicos.</p>
+              <div class="product-price-row">
+                <span class="price">R$ 24,50</span>
+                <button class="add-to-cart-btn" onclick="addToCart('Snack Natural de Frango', 24.50)">
+                  <i class="fa-solid fa-plus"></i> Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 5: CONTATO & AGENDAMENTO -->
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">FALE CONOSCO</span>
+          <h2 class="section-title">Agende um Horário ou Tire Dúvidas</h2>
+          <p>Preencha os dados abaixo e nossa equipe entrará em contato em instantes.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info de Contato -->
+          <div class="contact-info">
+            <h3>Informações da Unidade</h3>
+            <p>Venha tomar um café conosco enquanto seu companheiro recebe o melhor atendimento.</p>
+            
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Endereço</strong>
+                <p>Av. das Palmeiras, 1020 - Centro</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Telefone / WhatsApp</strong>
+                <p>(19) 98765-4321</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Horário de Funcionamento</strong>
+                <p>Segunda a Sábado: 08h às 19h<br>Domingos e Feriados: 08h às 13h</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- Formulário -->
+          <form class="contact-form" id="booking-form">
+            <div class="form-group">
+              <label for="nome">Seu Nome Completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Ex: Celso Carvalho" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pet">Nome do Pet</label>
+                <input type="text" id="pet" name="pet" placeholder="Ex: Thor" required />
+              </div>
+              <div class="form-group">
+                <label for="tipo">Espécie</label>
+                <select id="tipo" name="tipo" required>
+                  <option value="Cachorro">Cachorro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="servico-select">Serviço Desejado</label>
+                <select id="servico-select" name="servico" required>
+                  <option value="Banho & Tosa">Banho & Tosa</option>
+                  <option value="Consulta Veterinária">Consulta Veterinária</option>
+                  <option value="Vacinação">Vacinação</option>
+                  <option value="Táxi Pet">Táxi Pet</option>
+                  <option value="Outro">Outro / Dúvida Comercial</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="data">Data de Preferência</label>
+                <input type="date" id="data" name="data" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Observações (opcional)</label>
+              <textarea id="mensagem" name="mensagem" rows="3" placeholder="Alergias, comportamento receoso, necessidades especiais..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">
+              <i class="fa-regular fa-paper-plane"></i> Enviar Solicitação
+            </button>
+            <p class="form-feedback" id="form-feedback"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <i class="fa-solid fa-paw"></i>
+        <span>Pet<strong>Lover</strong></span>
+        <p>Amor e respeito em cada detalhe do cuidado animal.</p>
+      </div>
+      <p class="footer-copy">&copy; 2026 PetLover Pet Shop. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT EXTERNO -->
+  <script src="script.js"></script>
+</body>
+</html>
